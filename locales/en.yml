@@ -1,0 +1,26 @@
+Availabilities: Availabilities
+Campaigns: Campaigns
+EditCampaign: Edit campaign
+Joined on: Joined on
+Name: Name
+Points: Points
+ProductRecruitment: Product recruitment
+Published: Published
+Relations: Relations
+SearchHelper: Search any helpers...
+Statuts: Statuts
+button:
+  about: About
+  back: Back
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+intro:
+  aka: Also known as
+  desc: Opinionated Vite Starter Template
+  dynamic-route: Demo of dynamic route
+  hi: Hi, {name}!
+  whats-your-name: What's your name?
+noData: No data to display
+not-found: Not found
