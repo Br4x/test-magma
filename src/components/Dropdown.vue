@@ -3,11 +3,17 @@ defineProps<{
   options: Array<string>
   defaultValue: string | number
 }>()
-defineEmits<{
+const emit = defineEmits<{
   (e: 'change', value: string): void
 }>()
+
 const isOptionsExpanded = ref(false)
 const selectedOption = ref('')
+
+function selectOption(option: string) {
+  isOptionsExpanded.value = false
+  emit('change', option)
+}
 </script>
 
 <template>
@@ -36,7 +42,7 @@ const selectedOption = ref('')
           v-for="(option, index) in options"
           :key="index"
           class="px-3 py-2 transition-colors duration-300 hover:bg-gray-200"
-          @mousedown.prevent="$emit('change', option)"
+          @mousedown.prevent="selectOption(option)"
         >
           {{ option }}
         </li>

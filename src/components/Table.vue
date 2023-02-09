@@ -58,14 +58,16 @@ const { t } = useI18n()
           </td>
         </tr>
         <tr>
-          <td colspan="100" class="flex justify-between w-full">
-            <div />
-            <div>
-              <Pagination :current="currentPage" :per-page="pageSize" :total="totalPages" @change-page="$emit('change-page', $event)" />
-            </div>
-            <div class="flex items-center">
-              Row par page :
-              <Dropdown class="ml-2" :options="['25', '50', '100', 'All']" :default-value="pageSize" @change="$emit('change-page-size', $event)" />
+          <td colspan="100" class="table-cell justify-between w-full">
+            <div class="flex justify-between">
+              <div />
+              <div>
+                <Pagination :current="currentPage" :per-page="pageSize" :total="totalPages" @change-page="$emit('change-page', $event)" />
+              </div>
+              <div class="flex items-center mr-2 text-slate-600">
+                Row par page :
+                <Dropdown class="ml-2" :options="['10', '25', '50', '100', 'All']" :default-value="pageSize" @change="$emit('change-page-size', $event)" />
+              </div>
             </div>
           </td>
         </tr>
