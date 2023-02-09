@@ -24,7 +24,7 @@
         href="/"
         title="account"
       >
-        <img class="w-10 h-10 mr-6" src="Avatar.png" alt="netflix logo">
+        <img class="w-10 h-10 mr-6" src="/Avatar.png" alt="netflix logo">
         Netflix
       </a>
 
@@ -82,7 +82,7 @@
         "
       >
         <button class="flex items-center rounded-md py-4 text-white">
-          <img class="w-10 h-10" src="Natali.png">
+          <img class="w-10 h-10" src="/Natali.png">
           <span class="ml-4 whitespace-nowrap">Natali Graig</span>
           <i class="w-6 h6 i-ic-twotone-logout" />
         </button>

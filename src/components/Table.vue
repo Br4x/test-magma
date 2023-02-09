@@ -31,7 +31,7 @@ const { t } = useI18n()
       </thead>
       <tbody>
         <tr v-if="!isLoading && !rows.length">
-          <td :colspan="columns.length">
+          <td class="p-3 text-center w-full border-b" :colspan="columns.length">
             <slot name="noData">
               {{ t('noData') }}
             </slot>
@@ -61,13 +61,7 @@ const { t } = useI18n()
           <td colspan="100" class="flex justify-between w-full">
             <div />
             <div>
-              <button v-for="page in (currentPage + 2)" :key="`page_${page}`" :class="{ 'bg-blue-50 text-blue-600': currentPage === page }" class="page-btn" @click="$emit('change-page', page)">
-                {{ page }}
-              </button>
-              <span v-if="totalPages > 4">...</span>
-              <button class="page-btn">
-                {{ totalPages }}
-              </button>
+              <Pagination :current="currentPage" :per-page="pageSize" :total="totalPages" @change-page="$emit('change-page', $event)" />
             </div>
             <div class="flex items-center">
               Row par page :

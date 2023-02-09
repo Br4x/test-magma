@@ -15,7 +15,7 @@ defineProps<{
       'bg-red-100 text-red-800': color === BadgeColor.Invalid,
       'bg-blue-100 text-blue-800': color === BadgeColor.Info,
     }"
-    class="rounded-full px-1.5 py-0.5 inline-flex items-center capitalize"
+    class="rounded-full px-1.5 py-0.5 inline-flex items-center capitalize font-medium"
   >
     <i
       v-if="withDot" :class="{
